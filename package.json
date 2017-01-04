@@ -1,0 +1,30 @@
+{
+  "name": "ensure-git",
+  "version": "0.0.0",
+  "description": "Ensure git status before running something like npm publish.",
+  "repository": {
+    "url": "egoist/ensure-git",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava && npm run lint",
+    "lint": "xo"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false
+  },
+  "dependencies": {
+    "execa": "^0.5.0"
+  }
+}
