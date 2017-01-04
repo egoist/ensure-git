@@ -10,6 +10,7 @@ test('main', async t => {
   await execa.shell(`
     mkdir -p example-main &&
     cd example-main &&
+    git init &&
     git config user.name name &&
     git config user.email email
   `)
