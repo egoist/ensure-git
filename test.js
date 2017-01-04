@@ -7,9 +7,12 @@ test.after(async () => {
 })
 
 test('main', async t => {
-  await execa('mkdir', ['-p', 'example-main'])
-  await execa('git', ['config', 'user.name', 'name'], {cwd: 'example-main'})
-  await execa('git', ['config', 'user.email', 'email'], {cwd: 'example-main'})
+  await execa.shell(`
+    mkdir -p example-main &&
+    cd example-main &&
+    git config user.name name &&
+    git config user.email email
+  `)
   try {
     await ensureGit({cwd: 'example-main'})
   } catch (err) {
