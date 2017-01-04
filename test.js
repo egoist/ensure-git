@@ -12,7 +12,9 @@ test('main', async t => {
     cd example-main &&
     git init &&
     git config user.name name &&
-    git config user.email email
+    git config user.email email &&
+    git checkout -b master &&
+    touch a.txt
   `)
   try {
     await ensureGit({cwd: 'example-main'})
