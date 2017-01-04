@@ -1,6 +1,6 @@
 {
   "name": "ensure-git",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ensure git status before running something like npm publish.",
   "repository": {
     "url": "egoist/ensure-git",
